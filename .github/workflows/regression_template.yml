@@ -67,7 +67,7 @@ jobs:
       with:
         submodules: true
 
-    - name: Dump Inputs
+    - name: Dump Template Inputs
       run: |
         echo install_script: ${{ inputs.install_script }}
         echo build_script: ${{ inputs.build_script }}
