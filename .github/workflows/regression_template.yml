@@ -66,6 +66,14 @@ jobs:
       uses: actions/checkout@v4
       with:
         submodules: true
+
+    - name: Dump Inputs
+      run: |
+        echo install_script: ${{ inputs.install_script }}
+        echo build_script: ${{ inputs.build_script }}
+        echo test_script: ${{ inputs.test_script }}
+        echo skip_coverage: ${{ inputs.skip_coverage }}
+        echo coverage_name: ${{ inputs.coverage_name }}
     
     - name: Install softwares
       run: ${{ inputs.install_script }}
